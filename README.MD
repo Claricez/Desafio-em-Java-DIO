@@ -62,3 +62,34 @@ Multiplique a quantidade de servidores pelo custo por hora de um servidor e a qu
 * Exiba o resultado:
 
 Mostre ao usuário o custo total do uso da AWS para executar o aplicativo durante uma hora.
+
+
+4. [Desafio 4 - Regras Para Dimensionamento de Infraestrutura com EKS](https://github.com/Claricez/Desafio-em-Java-DIO/blob/main/src/RegrasEKS.java)
+
+### Descrição do Problema
+
+Você é um engenheiro responsável por ajudar as equipes de desenvolvimento a calcular o número mínimo de nodes e servidores necessários para suportar seus aplicativos no cluster do EKS..
+
+Regras Básicas:
+
+- Cada node pode suportar até 10 pods.
+- Cada servidor (EC2) pode suportar até 4 pods.
+
+Seu objetivo é desenvolver um programa em Java que permita ao usuário fazer uma consulta de dimensionamento. O programa deve receber o número total de pods do aplicativo e calcular o número mínimo de nodes e servidores necessários com base nas regras de dimensionamento.
+
+Aqui estão as etapas que você deve seguir:
+
+* Inicialização:
+
+Defina as regras básicas de dimensionamento, ou seja, a capacidade de pods por node e pods por servidor.
+* Recebendo as informações:
+
+Solicite ao usuário que digite o número total de pods do aplicativo (utilize a função Scanner).
+* Cálculo:
+
+Calcule o número mínimo de nodes necessários, arredondando para cima o resultado da divisão do número total de pods pelo número de pods por node.
+Calcule o número mínimo de servidores necessários, arredondando para cima o resultado da divisão do número total de pods pelo número de pods por servidor.
+* Recomendações:
+
+Se o número mínimo de nodes for menor ou igual a 1, exiba a recomendação de usar um único node.
+Se o número mínimo de servidores for menor ou igual a 1, exiba a recomendação de usar um único servidor.
